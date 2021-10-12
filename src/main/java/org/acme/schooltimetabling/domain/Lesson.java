@@ -21,15 +21,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import org.optaplanner.core.api.domain.entity.PlanningEntity;
-import org.optaplanner.core.api.domain.lookup.PlanningId;
-import org.optaplanner.core.api.domain.variable.PlanningVariable;
-
-@PlanningEntity
 @Entity
 public class Lesson {
 
-    @PlanningId
     @Id
     @GeneratedValue
     private Long id;
@@ -38,10 +32,8 @@ public class Lesson {
     private String teacher;
     private String studentGroup;
 
-    @PlanningVariable(valueRangeProviderRefs = "timeslotRange")
     @ManyToOne
     private Timeslot timeslot;
-    @PlanningVariable(valueRangeProviderRefs = "roomRange")
     @ManyToOne
     private Room room;
 

@@ -27,10 +27,6 @@ import org.acme.schooltimetabling.domain.TimeTable;
 import org.acme.schooltimetabling.persistence.LessonRepository;
 import org.acme.schooltimetabling.persistence.RoomRepository;
 import org.acme.schooltimetabling.persistence.TimeslotRepository;
-import org.optaplanner.core.api.score.ScoreManager;
-import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
-import org.optaplanner.core.api.solver.SolverManager;
-import org.optaplanner.core.api.solver.SolverStatus;
 
 import io.quarkus.panache.common.Sort;
 
@@ -44,9 +40,6 @@ public class TimeTableResource {
     @Inject
     LessonRepository lessonRepository;
 
-    @Inject
-    SolverManager<TimeTable, Long> solverManager;
-
     @GET
     public TimeTable getTimeTable() {
         return loadTimeTable();
@@ -55,15 +48,13 @@ public class TimeTableResource {
     @POST
     @Path("solve")
     public void solve() {
-        solverManager.solveAndListen(1L,
-                (problemId) -> loadTimeTable(),
-                this::save);
+        throw new UnsupportedOperationException("TODO");
     }
 
     @POST
     @Path("stopSolving")
     public void stopSolving() {
-        solverManager.terminateEarly(1L);
+        throw new UnsupportedOperationException("TODO");
     }
 
     @Transactional
