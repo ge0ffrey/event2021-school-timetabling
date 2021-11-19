@@ -13,16 +13,16 @@ public class Room {
 
     private String name;
 
+
+    // ************************************************************************
+    // Constructors
+    // ************************************************************************
+
     public Room() {
     }
 
     public Room(String name) {
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 
     // ************************************************************************
@@ -34,6 +34,15 @@ public class Room {
     }
 
     public String getName() {
+        return name;
+    }
+
+    // ************************************************************************
+    // toString
+    // ************************************************************************
+
+    @Override
+    public String toString() {
         return name;
     }
 

@@ -18,6 +18,11 @@ public class Timeslot {
     private LocalTime startTime;
     private LocalTime endTime;
 
+
+    // ************************************************************************
+    // Constructors
+    // ************************************************************************
+
     public Timeslot() {
     }
 
@@ -25,11 +30,6 @@ public class Timeslot {
         this.dayOfWeek = dayOfWeek;
         this.startTime = startTime;
         this.endTime = endTime;
-    }
-
-    @Override
-    public String toString() {
-        return dayOfWeek + " " + startTime;
     }
 
     // ************************************************************************
@@ -50,6 +50,15 @@ public class Timeslot {
 
     public LocalTime getEndTime() {
         return endTime;
+    }
+
+    // ************************************************************************
+    // toString
+    // ************************************************************************
+
+    @Override
+    public String toString() {
+        return dayOfWeek + " " + startTime;
     }
 
 }

@@ -21,6 +21,11 @@ public class Lesson {
     @ManyToOne
     private Room room;
 
+
+    // ************************************************************************
+    // Constructors
+    // ************************************************************************
+
     public Lesson() {
     }
 
@@ -28,11 +33,6 @@ public class Lesson {
         this.subject = subject;
         this.teacher = teacher;
         this.studentGroup = studentGroup;
-    }
-
-    @Override
-    public String toString() {
-        return subject + "(" + id + ")";
     }
 
     // ************************************************************************
@@ -69,6 +69,15 @@ public class Lesson {
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    // ************************************************************************
+    // toString
+    // ************************************************************************
+
+    @Override
+    public String toString() {
+        return subject + "(" + id + ")";
     }
 
 }

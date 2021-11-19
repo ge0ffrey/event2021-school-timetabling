@@ -8,6 +8,11 @@ public class TimeTable {
     private List<Room> roomList;
     private List<Lesson> lessonList;
 
+
+    // ************************************************************************
+    // Constructors
+    // ************************************************************************
+
     public TimeTable() {
     }
 
